@@ -1,4 +1,4 @@
-require_relative '../lib/kissmetrics_notifier'
+require 'spec_helper'
 
 describe KissmetricsNotifier, 'notify_of' do
   it 'calls send_event on the client' do

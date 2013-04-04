@@ -1,5 +1,4 @@
-require_relative '../lib/purchases_controller'
-require_relative '../lib/kissmetrics_notifier'
+require 'spec_helper'
 
 describe PurchasesController, '#create' do
   it 'does not raise errors' do

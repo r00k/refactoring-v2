@@ -1,5 +1,4 @@
-require 'plumbing'
-require_relative 'support/fake_kissmetrics_client'
+require 'spec_helper'
 
 describe FakeKissmetricsClient, '#send_event' do
   it 'records events that can be read back later' do
