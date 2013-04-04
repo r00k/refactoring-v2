@@ -1,7 +1,7 @@
 require 'plumbing'
 
 class ApplicationController
-  cattr_writer :kissmetrics_http_client
+  cattr_accessor :kissmetrics_http_client
 
   KISSMETRICS_API_KEY = 'lolapikey'
 
