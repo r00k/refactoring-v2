@@ -1,5 +1,7 @@
 Dependency injection
-  km_http_client
+  open ApplicationController and PurchasesController
+
+
 
 LoD
   Show stub chains in tests

@@ -1,5 +1,4 @@
-require 'active_support/core_ext/class/attribute_accessors'
-require 'kissmetrics_http_client'
+require 'plumbing'
 
 class ApplicationController
   cattr_writer :kissmetrics_http_client

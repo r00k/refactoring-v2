@@ -1,5 +1,4 @@
-require 'application_controller'
-require 'purchase'
+require 'plumbing'
 
 class PurchasesController < ApplicationController
   def create
