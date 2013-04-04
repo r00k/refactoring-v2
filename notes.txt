@@ -1,0 +1,14 @@
+Dependency injection
+  km_http_client
+
+LoD
+  Show stub chains in tests
+  You can't "just duplicate once"
+    Story about trying to find root cause of difficulty behind a change
+      
+Iceberg classes
+  Listen to the tests
+
+View specs vs integration specs
+
+Using pure mocks in views

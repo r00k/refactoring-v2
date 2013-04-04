@@ -1,3 +1,6 @@
+General:
+  Show code right away
+
 Topics:
   How two good OO ideas can disagree with each other
   Law of Demeter
