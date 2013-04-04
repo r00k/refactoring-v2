@@ -18,6 +18,10 @@ Dependency injection
     refactor to block with ensure
     remove code from ApplicationController
     fixup tests
+  benefits of new code
+    still injecting dependency
+    implicit is now implicitly captured
+    indirection is lowered
 
 LoD
   Show stub chains in tests
