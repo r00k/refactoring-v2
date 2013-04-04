@@ -10,8 +10,5 @@ class ApplicationController
   end
 end
 
-# In config/initializers/kissmetrics_http_client.rb
-ApplicationController.kissmetrics_http_client = KissmetricsHttpClient
-
 # In spec/support/fake_kissmetrics.rb
 # ApplicationController.kissmetrics_http_client = FakeKissmetrics

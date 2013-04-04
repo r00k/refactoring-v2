@@ -1,7 +1,6 @@
 Dependency injection
   open ApplicationController and PurchasesController
-
-
+  this isn't meant to be exemplary code, it's real code
 
 LoD
   Show stub chains in tests
