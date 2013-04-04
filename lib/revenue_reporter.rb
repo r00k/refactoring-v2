@@ -4,6 +4,6 @@ class RevenueReporter
   end
 
   def notify_of(purchase)
-    @client.send_event(purchase.product_name, purchase.amount)
+    @client.send_event('purchase', purchase.product_name, purchase.amount)
   end
 end

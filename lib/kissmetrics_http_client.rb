@@ -3,6 +3,6 @@ class KissmetricsHttpClient
   end
 
   def send_event
-    # LOL NO-OP but you can guess what'd be here.
+    # Send event to Kissmetrics' real API.
   end
 end

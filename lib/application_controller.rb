@@ -9,6 +9,3 @@ class ApplicationController
     @@kissmetrics_http_client.new(KISSMETRICS_API_KEY)
   end
 end
-
-# In spec/support/fake_kissmetrics.rb
-# ApplicationController.kissmetrics_http_client = FakeKissmetrics

@@ -1,6 +1,9 @@
 Dependency injection
-  open ApplicationController and PurchasesController
-  this isn't meant to be exemplary code, it's real code
+  this isn't meant to be exemplary code, based on real code
+  also isn't really rails, so there's some small weirdness
+  open PurchasesController
+  where does km_http_client come from?
+
 
 LoD
   Show stub chains in tests
