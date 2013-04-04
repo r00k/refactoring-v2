@@ -11,9 +11,11 @@ Dependency injection
       class variables and cattr_* are confusing
     hides implicit knowledge
   BEGIN
-    in purchases_controller, create local kissmetrics_http_client factory
-      
-
+    open up kissmetrics_client_factory.rb and spec
+    add first test for fake factory in test mode
+    talk about sliming
+    add test for non-test-mode, don't use fancy block
+    refactor to block with ensure
 
 LoD
   Show stub chains in tests
