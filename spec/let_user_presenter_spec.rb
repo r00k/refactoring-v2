@@ -3,7 +3,7 @@ require 'spec_helper'
 describe UserPresenter do
   let(:user) do
     stub('user', name: 'Lord Bennington',
-        company: stub('company', name: 'Katzenjammers'))
+         company: stub('company', name: 'Katzenjammers'))
   end
 
   describe '#name' do
