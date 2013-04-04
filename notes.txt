@@ -40,12 +40,11 @@ LoD
       violates OCP
     factory methods are okay
       
+View specs vs integration specs
+  Side note: using pure mocks in views
+
 Iceberg classes
   Listen to the tests
-
-View specs vs integration specs
-
-Using pure mocks in views
 
 Todo
   opening 'slide'
