@@ -3,7 +3,7 @@ require 'plumbing'
 class PurchasesController < ApplicationController
   def create
     purchase = Purchase.create(params[:purchase])
-    RevenueReporter.new(kissmetrics_http_client).
+    KissmetricsNotifier.new(kissmetrics_http_client).
       notify_of(purchase)
   end
 

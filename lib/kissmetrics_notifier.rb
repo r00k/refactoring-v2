@@ -1,4 +1,4 @@
-class RevenueReporter
+class KissmetricsNotifier
   def initialize(client)
     @client = client
   end
