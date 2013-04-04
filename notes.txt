@@ -1,9 +1,8 @@
 Dependency injection
-  this isn't meant to be exemplary code, based on real code
-  also isn't really rails, so there's some small weirdness
+  isn't exemplary, it's real
+  isn't rails, so there's some small weirdness
   open PurchasesController
   where does km_http_client come from?
-
 
 LoD
   Show stub chains in tests
@@ -16,3 +15,6 @@ Iceberg classes
 View specs vs integration specs
 
 Using pure mocks in views
+
+Todo
+  opening 'slide'

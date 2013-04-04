@@ -3,7 +3,7 @@ require 'plumbing'
 class FakeKissmetrics
   attr_reader :events
 
-  def initialize
+  def initialize(api_key)
     @events = []
   end
 
@@ -11,3 +11,5 @@ class FakeKissmetrics
     @events << [*args]
   end
 end
+
+ApplicationController.kissmetrics_http_client = FakeKissmetrics
