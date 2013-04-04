@@ -27,10 +27,16 @@ LoD
   Most programmers know what LoD is
   Most say they *usually* follow it
   Isn't that good enough?
-  Show stub chains in tests
   You can't "just duplicate once"
     Story about trying to find root cause of difficulty behind a change
-  Show let_user_presenter_spec.rb
+  let_user_presenter_spec.rb
+    problems
+      mystery guest causes obscurity - exercise refers to actors not in setup
+      fragile tests from complicated fixture
+        example: a test called "returns a default when no parent company exists"
+      slow tests due to extra data
+      violates OCP
+    factory methods are okay
   Clarify chains using same type are okay
       
 Iceberg classes
@@ -42,3 +48,4 @@ Using pure mocks in views
 
 Todo
   opening 'slide'
+  add learn plug
