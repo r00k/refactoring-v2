@@ -10,6 +10,9 @@ Dependency injection
     indirection
       class variables and cattr_* are confusing
     hides implicit knowledge
+  BEGIN
+    in purchases_controller, create local kissmetrics_http_client factory
+      
 
 
 LoD
