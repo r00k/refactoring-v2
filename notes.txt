@@ -3,6 +3,14 @@ Dependency injection
   isn't rails, so there's some small weirdness
   open PurchasesController
   where does km_http_client come from?
+  benefits
+    injecting this dependency makes testing easier
+      don't need to stub out KM-related methods - good for integration
+  costs
+    indirection
+      class variables and cattr_* are confusing
+    hides implicit knowledge
+
 
 LoD
   Show stub chains in tests
