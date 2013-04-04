@@ -10,8 +10,12 @@ describe UserPresenter do
 
   describe '#parent_company_name' do
     it "returns the user's company name" do
-      user = stub('user', company: stub('company', name: 'Katzenjammers'))
-      UserPresenter.new(user).company_name.should == 'Katzenjammers'
+      user = stub('user',
+                  company: stub('company',
+                                name: 'Katzenjammers'))
+
+      UserPresenter.new(user).company_name.should ==
+        'Katzenjammers'
     end
   end
 end
