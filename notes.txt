@@ -27,6 +27,7 @@ LoD
   Show stub chains in tests
   You can't "just duplicate once"
     Story about trying to find root cause of difficulty behind a change
+  Show let_user_presenter_spec.rb
       
 Iceberg classes
   Listen to the tests
