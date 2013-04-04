@@ -10,4 +10,8 @@ class UserPresenter
   def company_name
     @user.company.name
   end
+
+  def parent_company_name
+    @user.company.parent_company.name
+  end
 end

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe UserPresenter do
   let(:user) do
     stub('user', name: 'Lord Bennington',
-         company: stub('company', name: 'Katzenjammers'))
+         company: stub('company', name: 'CompanyCorp'))
   end
 
   describe '#name' do
@@ -12,10 +12,10 @@ describe UserPresenter do
     end
   end
 
-  describe '#parent_company_name' do
+  describe '#company_name' do
     it "returns the user's company name" do
       UserPresenter.new(user).company_name.should ==
-        'Katzenjammers'
+        'CompanyCorp'
     end
   end
 end

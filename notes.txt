@@ -24,10 +24,14 @@ Dependency injection
     indirection is lowered
 
 LoD
+  Most programmers know what LoD is
+  Most say they *usually* follow it
+  Isn't that good enough?
   Show stub chains in tests
   You can't "just duplicate once"
     Story about trying to find root cause of difficulty behind a change
   Show let_user_presenter_spec.rb
+  Clarify chains using same type are okay
       
 Iceberg classes
   Listen to the tests
