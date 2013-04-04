@@ -29,6 +29,8 @@ LoD
   Isn't that good enough?
   You can't "just duplicate once"
     Story about trying to find root cause of difficulty behind a change
+  Clarify chains using same type are okay
+  Point people to Avdi's post
   let_user_presenter_spec.rb
     problems
       mystery guest causes obscurity - exercise refers to actors not in setup
@@ -37,7 +39,6 @@ LoD
       slow tests due to extra data
       violates OCP
     factory methods are okay
-  Clarify chains using same type are okay
       
 Iceberg classes
   Listen to the tests
