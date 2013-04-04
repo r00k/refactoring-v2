@@ -1,0 +1,112 @@
+Topics:
+  How two good OO ideas can disagree with each other
+  Law of Demeter
+    Explain it really clearly
+    How religiously should one follow it?
+    Pros and Cons
+  Parallel hierarchies
+    Cost of things like NullObjects or decorators
+  Anti-pattern: extract module
+    Why I don't use ActiveSupport::Concern 
+      http://programmingtour.blogspot.com/2012/12/why-i-dont-use-activesupportconcern.html
+  Duplication
+    Is it okay to duplicate once?
+      Hard to know you're only doing it once - can't see it on a diff
+    Maybe better to never duplicate
+  Surprising downsides
+    Extract method / High-level method names
+      Hides temporal coupling - does B HAVE to be called after A sets something up?
+
+Synergy between testability and good design
+  Testing rails controllers is hard to do in isolation (without weird stubbing) due to weird design
+    You can't just instantiate a controller and call methods on it
+    RSpec does lots of magic to give you a handle to `controller`
+  Iceberg classes (lots of priv methods)
+  Improving design tends to improve testability, but NOT the other way around?!
+  Good OO code tends to look like FP code - we paramaterize the variants.
+  Testing is easy in the presence of good design
+
+Integrating FP and OO
+  The hardest part of fixing bad codebases is fear that changes will ripple, immutable data helps
+
+Emotion-driven design
+  how you feel when you open a file might matter
+  app/models/reports/report.rb class from VPP
+
+Fan-in/fan-out
+  which is good? 
+  is this too coarse a metric?
+  Array vs User
+
+Seams
+  A place where you can alter behavior in your program without editing code
+
+Page Objects
+  Josh's post and Code Climate too.
+  DRYs up tests by having all page interaction in one place
+
+"Another issue to bear in mind in this is whether you really know how to do it.
+If you’ve done internationalization several times, then you’ll know the
+patterns you need to employ. As such you’re more likely to get it right. Adding
+anticipatory structures is probably better if you’re in that position, than if
+you’re new to the problem. So my advice would be that if you do know how to do
+it, you’re in a position to judge the costs of doing it now to doing it later.
+However if you’ve not done it before, not just are you not able to assess the
+costs well enough, you’re also less likely to do it well. In which case you
+should add it later. If you do add it then, and find it painful, you’ll
+probably be better off than you would have been had you added it early. Your
+team is more experienced, you know the domain better, and you understand the
+requirements better. Often in this position you look back at how easy it would
+have been with 20/20 hindsight. It may have been much harder to add it earlier
+than you think." Is Design Dead by Fowler
+
+Using fakes in integration testing
+
+OCP as applied to tests: 
+  each scenario should construct all its own data independently so that adding
+  a new test will never break an old one.  Most people break this rule by using
+  lets ("standard fixture" (not "shared fixture") according to xunit) and
+  before(:each) { @foo = bar }. Breaking old tests is really bad, because it's
+  hard to verify you've still got the same coverage.  It's okay to pull out
+  duplication, like factory methods, but don't share fixtures.  Declarative
+  tests are a bit more readable as prose, but harder to maintain, and harder to
+  follow when stuff goes wrong (gotta jump all over the place).
+
+  Good article on how TDD pushes you toward OCP: 
+    http://tech.michaelgroner.com/2009/01/22/how-tdd-clarified-openclosed-principle-me-2/
+
+
+Turn slow tests into fast tests testing pagination without creating lots of
+objects inject dependencies
+
+Fix LoD violation show that tests tell you why violation is bad fix, and see
+how much easier the tests become
+
+Introduce Value Object
+
+Example of testing simple conditional with integration test, when it could just
+be a view spec Aren't they more brittle?  Integration tests suffer from the
+same reliance on markup
+
+View specs
+  Exert the same positive design pressure on views
+  
+  Mocks in view specs:
+    Joe F.  I also tend not to use pure mocks in view specs
+    views ask a ton of questions by nature - their state always consists of struct-like objects, because they just stick various fields in various places
+    the idea of keeping your collaborator methods low doesn't apply if you've made the decision to write views that way (which we have by using MVC)
+    Matt J. has entered the room
+    Ben O.  What do you mea by "keeping your collaborator methods low"?
+    Few in number?
+    Joe F.  right
+    like, using a pure stub can be helpful, because it makes the test ugly if you're violating Tell, Don't Ask
+    but views don't follow TDA
+    Ben O.  I see
+    Joe F.  so using a pure stub is just asking to stub out a bunch of attr_readers
+    Ben O.  So it's not really a test smell that I'd have to stub out ever call.
+    Joe F.  in a view spec, I'd say it's not
+
+
+km_http_client cattr_accessor to factory:
+  https://github.com/thoughtbot/learn/pull/208
+
