@@ -1,5 +1,8 @@
 class KissmetricsHttpClient
   def initialize(api_key)
-    "LOL I'M A CLIENT!"
+  end
+
+  def send_event
+    # LOL NO-OP but you can guess what'd be here.
   end
 end
