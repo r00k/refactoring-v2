@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    active_support (3.0.0)
+      activesupport (= 3.0.0)
+    activesupport (3.0.0)
     bourne (1.4.0)
       mocha (~> 0.13.2)
     diff-lcs (1.2.2)
@@ -20,5 +23,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_support
   bourne
   rspec
