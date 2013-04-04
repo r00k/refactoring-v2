@@ -16,6 +16,8 @@ Dependency injection
     talk about sliming
     add test for non-test-mode, don't use fancy block
     refactor to block with ensure
+    remove code from ApplicationController
+    fixup tests
 
 LoD
   Show stub chains in tests
