@@ -47,10 +47,12 @@ Dependency injection
   where does km_http_client come from?
   benefits
     injecting this dependency makes testing easier
-      don't need to stub out KM-related methods - good for integration
+      can use a fake
+      don't need to stub out KM-related methods
   costs
     indirection
       class variables and cattr_* are confusing
+    divergent change
     hides implicit knowledge
   BEGIN
     open up kissmetrics_client_factory.rb and spec
