@@ -32,7 +32,12 @@ LoD
           example: a test called "returns a default when no parent company exists"
         slow tests due to extra data
         violates OCP
-      factory methods are okay
+  How you SHOULD DRY up the problem:
+    call @user.company_name (_ not .)
+    fix test
+    call @user.parent_company_name (_ not .)
+    consider extracting factory to stub user
+      better than let since it's more general and reusable
   Point people to Avdi's post
       
 Dependency injection
