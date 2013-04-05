@@ -39,6 +39,8 @@ LoD
     consider extracting factory to stub user
       better than let since it's more general and reusable
   Point people to Avdi's post
+
+Break: scary.rb
       
 Dependency injection
   isn't exemplary, it's real
@@ -67,11 +69,33 @@ Dependency injection
     implicit is now implicitly captured
     indirection is lowered
 
-View specs vs integration specs
-  Side note: using pure mocks in views
-
-Iceberg classes
-  Listen to the tests
+Testing a conditional in the view
+  Commit: 421572dcdbe78f7ae65f0a8be7a15919eb103cb3
+  Integration
+    slow, takes 0.3-0.5s each
+    makes sure the user ACTUALLY sees it, important?
+  View spec (_workshop.html.erb_spec.rb)
+    fast
+    isolated
+    leaves the conditional in the view
+  Helper
+    https://github.com/thoughtbot/learn/pull/200/files#L6L-1
+    fast
+    isolated
+    not very OO
+      stateless functions
+    doesn't confirm the user sees the text
+    can encourage business logic leakage
+      what if we have 5 helpers that duplicate this conditional?
+  Presenter (viewable_workshop.rb)
+    fast
+    isolated
+    gives a place for view-specific business logic to live
+    that conditional is still ocurring in the view
+  Polymorphic presenter (polymorphic_viewable_workshop)
+    presenter choice in controller feels better
+    only one conditional
+    still exists though, which is due to a smell: type code
 
 Todo
   opening 'slide'
@@ -84,4 +108,6 @@ Setup
   Clean up toolbar
   Load Avdi's blog post
   Load learn pull for km_http
+  Learn learn in separate screen window with git show 421572dcdbe78f7ae65f0a8be7a15919eb103cb3
+  Load learn pull: https://github.com/thoughtbot/learn/pull/200/files#L6L-1
 
