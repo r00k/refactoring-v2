@@ -1,10 +1,28 @@
 LoD
-  Most programmers know what LoD is
+  I'll alternate pronunciation to troll everybody
+  Define it
+  Show sneaky violation
+  It's really about DRY
+    Structural vs Data
+  The class is coupled to the current structure of the app
+  I'd rather it be coupled just to the contract of its parameter
+  You can ignore the definition though and focus on duplication
+    We're allowing structural duplication in client code
+    But also in specs
   Most say they *usually* follow it
-  Isn't that good enough?
-  You can't "just duplicate once"
-    Story about trying to find root cause of difficulty behind a change
-  Clarify chains using same type are okay
+    Isn't that good enough?
+      No
+        Beware of going back to fix things up
+        You can't "just duplicate once" 
+          Not on diff
+      Story about trying to find root cause of difficulty behind a change
+      Caring about duplication trough
+  Tweet about stub_chain
+  Objections
+    chains using same type are okay
+    I'll have all these boilerplate methods!
+      delegate macro
+      also, why is what you need so far from your starting object?
   Point people to Avdi's post
   let_user_presenter_spec.rb
     problems
@@ -49,6 +67,7 @@ Iceberg classes
 Todo
   opening 'slide'
   add learn plug
+  type of demeter laws
 
 Setup
   Clear history

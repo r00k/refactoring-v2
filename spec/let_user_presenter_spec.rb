@@ -1,16 +1,22 @@
 require 'spec_helper'
 
 describe UserPresenter do
-  let(:user) { stub('user',
-                    name: 'Lord Bennington',
-                    company: company) }
+  let(:user) do
+    stub('user',
+         name: 'Lord Bennington',
+         company: company)
+  end
 
-  let(:company) { stub('company',
-                       name: 'CompanyCorp',
-                       parent_company: parent_company) }
+  let(:company) do
+    stub('company',
+         name: 'CompanyCorp',
+         parent_company: parent_company)
+  end
 
-  let(:parent_company) { stub('parent_company',
-                              name: 'Consolidated Holdings') }
+  let(:parent_company) do
+    stub('parent_company',
+         name: 'Consolidated Holdings')
+  end
 
   describe '#name' do
     it "returns the user's name" do
