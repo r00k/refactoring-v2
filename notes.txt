@@ -23,15 +23,17 @@ LoD
     I'll have all these boilerplate methods!
       delegate macro
       also, why is what you need so far from your starting object?
+  How to NOT DRY up the problem:
+    let_user_presenter_spec.rb
+      problems
+        you've STILL encoded the structure of the app in the test
+        mystery guest causes obscurity - exercise refers to actors not in setup
+        fragile tests from complicated fixture
+          example: a test called "returns a default when no parent company exists"
+        slow tests due to extra data
+        violates OCP
+      factory methods are okay
   Point people to Avdi's post
-  let_user_presenter_spec.rb
-    problems
-      mystery guest causes obscurity - exercise refers to actors not in setup
-      fragile tests from complicated fixture
-        example: a test called "returns a default when no parent company exists"
-      slow tests due to extra data
-      violates OCP
-    factory methods are okay
       
 Dependency injection
   isn't exemplary, it's real
