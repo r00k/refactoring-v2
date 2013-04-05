@@ -36,9 +36,5 @@ describe UserPresenter do
       UserPresenter.new(user).parent_company_name.should ==
         'Consolidated Holdings'
     end
-
-    it "returns a default when no parent company exists" do
-      # Ruh roh.
-    end
   end
 end
