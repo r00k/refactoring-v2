@@ -1,3 +1,20 @@
+LoD
+  Most programmers know what LoD is
+  Most say they *usually* follow it
+  Isn't that good enough?
+  You can't "just duplicate once"
+    Story about trying to find root cause of difficulty behind a change
+  Clarify chains using same type are okay
+  Point people to Avdi's post
+  let_user_presenter_spec.rb
+    problems
+      mystery guest causes obscurity - exercise refers to actors not in setup
+      fragile tests from complicated fixture
+        example: a test called "returns a default when no parent company exists"
+      slow tests due to extra data
+      violates OCP
+    factory methods are okay
+      
 Dependency injection
   isn't exemplary, it's real
   isn't rails, so there's some small weirdness
@@ -23,23 +40,6 @@ Dependency injection
     implicit is now implicitly captured
     indirection is lowered
 
-LoD
-  Most programmers know what LoD is
-  Most say they *usually* follow it
-  Isn't that good enough?
-  You can't "just duplicate once"
-    Story about trying to find root cause of difficulty behind a change
-  Clarify chains using same type are okay
-  Point people to Avdi's post
-  let_user_presenter_spec.rb
-    problems
-      mystery guest causes obscurity - exercise refers to actors not in setup
-      fragile tests from complicated fixture
-        example: a test called "returns a default when no parent company exists"
-      slow tests due to extra data
-      violates OCP
-    factory methods are okay
-      
 View specs vs integration specs
   Side note: using pure mocks in views
 
@@ -49,3 +49,11 @@ Iceberg classes
 Todo
   opening 'slide'
   add learn plug
+
+Setup
+  Clear history
+  Clear desktop
+  Clean up toolbar
+  Load Avdi's blog post
+  Load learn pull for km_http
+
