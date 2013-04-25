@@ -113,3 +113,4 @@ View specs
 km_http_client cattr_accessor to factory:
   https://github.com/thoughtbot/learn/pull/208
 
+Refactor Discourse code
